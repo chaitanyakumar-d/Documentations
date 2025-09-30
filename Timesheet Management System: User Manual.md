@@ -105,6 +105,8 @@ A: Ensure you have admin access and check your browser download settings.
 
 For further help, please contact your system administrator or IT support team.
 
+email: chaitanyad@kattechsystems.in
+
 ---
 
 **End of User Manual**
