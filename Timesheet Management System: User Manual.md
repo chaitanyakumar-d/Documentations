@@ -1,112 +1,278 @@
-# Timesheet Management System: User Manual
-
-Welcome to the Timesheet Management System! This web application helps contract employees submit timesheets and allows administrators to review and manage submissions. Below you’ll find instructions for both employees and administrators.
+# KAT Tech Systems - Timesheet Application
+## User Manual
 
 ---
 
 ## Table of Contents
-
-1. [Getting Started](#getting-started)
-2. [Employee Guide](#employee-guide)
-    - [Logging In](#logging-in)
-    - [Submitting Timesheets](#submitting-timesheets)
-    - [Tracking Daily Time](#tracking-daily-time)
-    - [Editing/Viewing Previous Entries](#editingviewing-previous-entries)
-3. [Admin Guide](#admin-guide)
-    - [Accessing the Dashboard](#accessing-the-dashboard)
-    - [Viewing Timesheets](#viewing-timesheets)
-    - [Exporting Data](#exporting-data)
-4. [Authentication](#authentication)
-5. [Troubleshooting & FAQ](#troubleshooting--faq)
-6. [Contact & Support](#contact--support)
+1. [Introduction](#introduction)
+2. [Accessing the Application](#accessing-the-application)
+3. [Employee Registration](#employee-registration)
+4. [Employee Login](#employee-login)
+5. [Employee Dashboard](#employee-dashboard)
+6. [Submitting Timesheets](#submitting-timesheets)
+7. [Admin Login](#admin-login)
+8. [Admin Dashboard](#admin-dashboard)
+9. [Team Lead Approval](#team-lead-approval)
+10. [Troubleshooting](#troubleshooting)
 
 ---
 
-## Getting Started
+## 1. Introduction
 
-1. **Access the Application**  
-   Open the web application in your browser using the deployment URL provided by your organization.
+The **KAT Tech Systems Timesheet Application** is a web-based system for managing employee work hours and timesheet approvals. It provides:
 
-2. **Login Credentials**  
-   Obtain your username and password from your admin or HR department.
-
----
-
-## Employee Guide
-
-### Logging In
-
-1. Navigate to the login page.
-2. Enter your username and password.
-3. Click “Login”.  
-   If your credentials are correct, you’ll be redirected to your dashboard.
-
-### Submitting Timesheets
-
-1. Go to the “Timesheet Submission” section.
-2. Select the date(s) for which you’re submitting hours.
-3. Enter your working hours for each day.
-4. Optionally, add notes or comments.
-5. Click “Submit”.
-
-### Tracking Daily Time
-
-- Use the daily tracker to record your start and end times.
-- Save your entries to keep your timesheet up to date.
-
-### Editing/Viewing Previous Entries
-
-- Access the “My Timesheets” section.
-- Click on an entry to view details.
-- Edit or update any mistakes, then resubmit if needed.
+- **Employee Self-Registration** with email verification
+- **Role-based Access Control** (Admin, Team Lead, Employee)
+- **Timesheet Submission** with project tracking
+- **Multi-level Approval System**
+- **Admin Management Panel**
 
 ---
 
-## Admin Guide
+## 2. Accessing the Application
 
-### Accessing the Dashboard
+### URL
+Access the application at: **http://timesheet.kattechsystems.in**
 
-1. Log in with your administrator credentials.
-2. You’ll be redirected to the “Admin Dashboard”.
-
-### Viewing Timesheets
-
-- The dashboard displays all submitted timesheets.
-- Use filters to search by employee, date range, or status.
-
-### Exporting Data
-
-- Click the “Export” button to download timesheet data in CSV format for payroll or reporting.
+### Browser Requirements
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- JavaScript enabled
+- Cookies enabled
 
 ---
 
-## Authentication
+## 3. Employee Registration
 
-- The system uses simple session-based authentication.
-- If your session expires, you’ll be asked to log in again.
-- For password resets, contact your administrator.
+### Step 1: Navigate to Registration Page
+- Click **"Click here to register"** on the login page
+- Or go directly to: http://timesheet.kattechsystems.in/register.html
 
----
+### Step 2: Fill Registration Form
+1. **Full Name**: Enter your complete name
+2. **Company Email**: Enter your @kattechsystems.com or @kattechsystems.in email
+3. **Role**: Select your job role from the dropdown
+4. **Password**: Create a password (minimum 6 characters)
+5. **Confirm Password**: Re-enter the same password
 
-## Troubleshooting & FAQ
+### Step 3: Email Verification
+1. Click **"Send OTP to Email"** button
+2. Check your email inbox for the OTP code
+3. Enter the 6-digit OTP in the form
+4. Click **"Register Account"**
 
-**Q: I forgot my password.**  
-A: Contact your administrator for a password reset.
-
-**Q: I can’t see my previous entries.**  
-A: Make sure you’re logged in with the correct account. If issues persist, notify admin.
-
-**Q: Export isn’t working.**  
-A: Ensure you have admin access and check your browser download settings.
-
----
-
-## Contact & Support
-
-For further help, please contact your system administrator or IT support team.
-
-email: chaitanyad@kattechsystems.in
+### Step 4: Wait for Admin Approval
+- Your account will be created in **"Pending"** status
+- Admin must approve your account before you can log in
+- You will receive an email notification once approved
 
 ---
 
-**End of User Manual**
+## 4. Employee Login
+
+### Step 1: Go to Login Page
+Navigate to: http://timesheet.kattechsystems.in/login
+
+### Step 2: Enter Credentials
+- **Email**: Your @kattechsystems.com or .in email
+- **Password**: The password you created during registration
+
+### Step 3: Click Login
+- You will be redirected to the Employee Dashboard
+
+### Forgot Password?
+- Click **"Forgot Password?"** link
+- Enter your email
+- Follow the reset instructions sent to your email
+
+---
+
+## 5. Employee Dashboard
+
+### Overview Tab
+View your timesheet statistics:
+- **Total Timesheets Submitted**
+- **Approved Timesheets**
+- **Pending Approval**
+- **Rejected Timesheets**
+
+### Quick Actions
+- Submit new timesheet
+- View recent submissions
+- Check approval status
+
+---
+
+## 6. Submitting Timesheets
+
+### Step 1: Open Timesheet Tab
+Click on **"Timesheet"** in the navigation menu
+
+### Step 2: Fill Timesheet Details
+
+**Work Date**
+- Select the date you worked
+
+**Project**
+- Enter the project name or code you worked on
+
+**Task Description**
+- Describe the work you completed
+- Be specific and detailed
+
+**Hours Worked**
+- Enter the number of hours (e.g., 8, 8.5)
+- Must be a positive number
+
+**Status**
+- Will automatically be set to "Pending"
+
+### Step 3: Submit Timesheet
+- Click **"Submit Timesheet"** button
+- You'll see a success message
+- The timesheet appears in your submission list
+
+### Step 4: Track Status
+Your timesheet will go through approval stages:
+1. **Pending** - Waiting for Team Lead approval
+2. **Team Lead Approved** - Waiting for Admin approval
+3. **Approved** - Fully approved by Admin
+4. **Rejected** - Rejected (check rejection reason)
+
+### Editing Timesheets
+- You can only edit timesheets in **"Pending"** status
+- Click the **Edit** button next to the timesheet
+- Update the details and click **"Update"**
+
+### Deleting Timesheets
+- You can only delete timesheets in **"Pending"** status
+- Click the **Delete** button and confirm
+
+---
+
+## 7. Admin Login
+
+### Admin Credentials
+- **Email**: Provided by system administrator
+- **Password**: Set during admin account creation
+
+### Access
+- Navigate to: http://timesheet.kattechsystems.in/login
+- Enter admin email and password
+- You will be redirected to the Admin Dashboard
+
+---
+
+## 8. Admin Dashboard
+
+### Overview Tab
+View system-wide statistics:
+- **Total Employees**
+- **Total Timesheets**
+- **Pending Approvals**
+- **Approved Timesheets**
+
+### Employees Tab
+Manage employee accounts:
+- **View All Employees**
+- **Approve Pending Registrations**
+- **Update Employee Roles**
+- **Delete Employee Accounts**
+
+**Approving New Employees:**
+1. Click on **"Employees"** tab
+2. Find employees with **"Pending"** status
+3. Click **"Approve"** button
+4. Employee can now log in
+
+### Timesheets Tab
+View and manage all timesheets:
+- See all employee timesheets
+- Filter by status
+- Approve or reject timesheets
+- Export reports
+
+**Approving Timesheets:**
+1. Click **"Approve Timesheets"** button
+2. Review timesheets pending admin approval
+3. Click **"Approve"** for each timesheet
+4. Or **"Reject"** with a reason
+
+### Roles Tab
+Manage system roles:
+- **View All Roles**
+- **Create New Roles**
+- **Edit Role Names**
+- **Delete Roles**
+
+**Note:** Employees assigned to a deleted role will be automatically reassigned to "Employee" role.
+
+---
+
+## 9. Team Lead Approval
+
+### Team Lead Role
+Team Leads have special permissions:
+- View team member timesheets
+- Approve timesheets (first level approval)
+- Cannot access admin functions
+
+### Approving Team Timesheets
+1. Log in with Team Lead credentials
+2. Navigate to **"Timesheet"** tab
+3. Review pending timesheets
+4. Click **"Approve"** or **"Reject"**
+5. Approved timesheets move to Admin for final approval
+
+---
+
+## 10. Troubleshooting
+
+### Cannot Register
+**Problem:** Email validation error
+- **Solution:** Ensure you're using @kattechsystems.com or @kattechsystems.in email
+
+**Problem:** OTP not received
+- **Solution:** Check spam folder, wait 1-2 minutes, or request a new OTP
+
+### Cannot Login
+**Problem:** "Invalid credentials"
+- **Solution:** Verify email and password are correct
+- **Solution:** Use "Forgot Password" to reset
+
+**Problem:** "Account pending approval"
+- **Solution:** Wait for admin to approve your registration
+
+### Timesheet Issues
+**Problem:** Cannot submit timesheet
+- **Solution:** Ensure all fields are filled correctly
+- **Solution:** Check that hours worked is a positive number
+
+**Problem:** Cannot edit timesheet
+- **Solution:** You can only edit timesheets in "Pending" status
+- **Solution:** Once approved/rejected, timesheets cannot be edited
+
+### General Issues
+**Problem:** Page not loading
+- **Solution:** Clear browser cache and refresh
+- **Solution:** Try a different browser
+- **Solution:** Check internet connection
+
+**Problem:** Changes not showing
+- **Solution:** Refresh the page (Ctrl+F5 or Cmd+R)
+- **Solution:** Log out and log back in
+
+---
+
+## Support
+
+For technical support or questions:
+- **Email:** chaitanyad@kattechsystems.in
+- **Report Issues:** Contact your system administrator
+
+---
+
+## System Information
+
+- **Application URL:** http://timesheet.kattechsystems.in
+- **Version:** 1.0
+- **Last Updated:** October 2025
